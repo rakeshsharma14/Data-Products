@@ -1,0 +1,46 @@
+---
+title: "Data Products Assignment Week 4"
+author: "P R Rakesh Sharma"
+date: "January 12, 2019"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Data Product - Understanding Diamond Prices with carat
+
+This application uses the following R features:
+
+* shiny web application architecture with ui and server files
+* diamond data set
+* linear model for prediction of Price with carat
+
+# User documentation
+This application is used by the end-user as follows:
+
+This application has a slider bar that is the input. The user simply slides the slider and this is used as the carat of the diamond. And the application shows the prdicted price against the carat
+
+The application has been published at 
+[link] https://rakeshsharma14.shinyapps.io/Assignment_4/
+
+# Source Code for the App
+
+The ui.r and server.r files contains the code for this app.
+The code has been published to the github and can be accessed at
+[link] https://github.com/rakeshsharma14/Data-Products
+
+
+# Price Prediction Plot
+
+```{r}
+library(ggplot2)
+p <-
+      ggplot(data = diamonds, aes(x = carat, y = price)) + geom_point()
+    p <-
+      p + geom_smooth(method = "lm") + xlab("Carat") + ylab("Price")
+    p <- p + xlim(0, 6) + ylim (0, 20000)
+    p
+```
