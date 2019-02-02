@@ -7,6 +7,7 @@ output: slidy_presentation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
 ```
 
 
@@ -21,7 +22,15 @@ This application uses the following R features:
 # User documentation
 This application is used by the end-user as follows:
 
-This application has a slider bar that is the input. The user simply slides the slider and this is used as the carat of the diamond. And the application shows the prdicted price against the carat
+This app enables you to display various subsets of the diamond data set and check the influence on the carat/price relationship in the data.
+A basic linear model relationship is displayed based on the selected subset of the data and price prediction is possible via selecting the 
+respective filter variables and a carat value.
+
+Furthermore it is possible to remove the filter and display the whole dataset by pressing the button SHOW ALL.
+To go back the the filtered view, press FILTER MODE and all your filters are reapplied. Per default, filter mode is active.
+
+Finally a data summary is displayed and a price can be predicted by selecting a subset of the data and choosing a carat value.
+Simply choose cut, color, clarity and carat as you see fit and a value is predicted based on your selection.
 
 The application has been published at 
 [link] https://rakeshsharma14.shinyapps.io/Assignment_4/
